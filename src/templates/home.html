@@ -1,7 +1,7 @@
 {% extends "base.html"%}
-{%block title%} {{block.super}}|home {%endblock%}
+{%block title%} {{block.super}}|home {%endblock title%}
 {% block content %}
- <h2> Welcome to deep learn {{myvar}} tut </h2>
+ <h3> Welcome to deep learn {{myvar}} tut </h3>
  {% if check %}
    {%for s in list1%}
    <p>
