@@ -10,5 +10,14 @@ def home(request):
     myvar = "it works"
     list1= [random.randint(0,1000000),random.randint(0,100000),random.randint(0,100000)]    #will be used for iterating in html
     context = {'myvar':myvar,'num':num, 'check':check,'list1':list1}                 #context dict passed as context to render
-    return render(request,"base.html",context)       #rendering htmls from template folder
+    return render(request,"home.html",context)       #rendering htmls from template folder
     #return HttpResponse('hello welcome to home')   #simple HttpResponse
+
+#used to show template inheritance
+def contact(request):
+    context = {}
+    return render(request,"contact.html",context)
+
+def about(request):
+    context = {}
+    return render(request,"about.html",context)
