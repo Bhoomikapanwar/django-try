@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{%block title%} {{block.super}}|Projects {%endblock%}
+{%block content%}
+<h1> Models </h1>
+<ul>
+  {%for obj in l %}
+    <li> {{obj}} </li>
+  {%endfor%}
+</ul>
+{%endblock%}
