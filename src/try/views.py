@@ -15,6 +15,10 @@ def home(request):
     return render(request,"home.html",context)       #rendering htmls from template folder
     #return HttpResponse('hello welcome to home')   #simple HttpResponse
 
+def models_list_view(request):
+    l= ['logistic regression','shallow neural net','deep neural net']
+    return render(request,"try/models_list.html",{'l':l})
+
 #used to show template inheritance
 def contact(request):
     context = {}
@@ -32,7 +36,7 @@ class ContactView(View):
 class AboutTemplateView(TemplateView):
     template_name = 'about.html'
 
-#class based template view overriding get_context_data method 
+#class based template view overriding get_context_data method
 class HomeTemplateView(TemplateView):
     template_name = 'home.html'
     def get_context_data(self,*args,**kwargs):
