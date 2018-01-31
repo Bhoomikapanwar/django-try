@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import home, contact, about, ContactView,AboutTemplateView,HomeTemplateView
+from .views import home, contact, about, ContactView,AboutTemplateView,HomeTemplateView,models_list_view
 from django.views.generic import TemplateView
 
 urlpatterns= [
@@ -8,7 +8,7 @@ urlpatterns= [
         #path('',home,name='home'),
         #path('contact/',contact,name='contact'),
         #path('about/',about,name='about'),
-
+        path('models/',models_list_view),
         #using class based views
         path('contact/',ContactView.as_view(),name='contact'),
 
